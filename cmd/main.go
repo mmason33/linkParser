@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"link"
+	"github.com/mmason33/go-html-link-parser/link"
 )
 
 // https://godoc.org/golang.org/x/net/html#example-Parse
