@@ -1,8 +1,6 @@
 package linkParser
 
 import (
-	"fmt"
-	"io/ioutil"
 	"strings"
 
 	"golang.org/x/net/html"
@@ -15,17 +13,17 @@ type Link struct {
 }
 
 //Parse parses the HTML file and returns Links
-func ParseHTMLLinks(filePath string) ([]Link, error) {
-	file, err := ioutil.ReadFile(filePath)
-	if err != nil {
-		fmt.Println(err)
-	}
+func ParseHTMLLinks(doc string) ([]Link, error) {
+	// file, err := ioutil.ReadFile(filePath)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// }
 
-	r := strings.NewReader(string(file))
-	doc, err := html.Parse(r)
-	if err != nil {
-		return nil, err
-	}
+	// r := strings.NewReader(string(file))
+	// doc, err := html.Parse(r)
+	// if err != nil {
+	// 	return nil, err
+	// }
 
 	return getLinks(doc), nil
 
