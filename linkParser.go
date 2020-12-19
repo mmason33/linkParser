@@ -54,5 +54,5 @@ func getText(n *html.Node) string {
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
 		text += getText(c)
 	}
-	return strings.Trim(text, "\n")
+	return strings.Trim(strings.TrimSpace(text), "\n")
 }
