@@ -1,3 +1,3 @@
-module github.com/mmason33/go-html-link-parser
+module github.com/mmason33/link
 
 go 1.15
